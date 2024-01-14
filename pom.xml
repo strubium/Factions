@@ -86,3 +86,68 @@
 	</dependencies>
 	
 </project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>Factions</name>
+    <url>http://www.massivecraft.com/factions</url>
+
+    <groupId>com.massivecraft</groupId>
+    <artifactId>Factions</artifactId>
+    <version>2.7.5</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <defaultGoal>install</defaultGoal>
+        <finalName>Factions</finalName>
+        <sourceDirectory>${basedir}/src/main/java/</sourceDirectory>
+        <resources>
+            <resource>
+                <targetPath>.</targetPath>
+                <directory>${basedir}/src/main/resources/</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>*.yml</include>
+                    <include>*.md</include>
+                    <include>*.txt</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>vault-repo</id>
+            <url>http://nexus.theyeticave.net/content/repositories/pub_releases</url>
+        </repository>
+        <repository>
+            <id>mcstats-repo</id>
+            <url>http://repo.mcstats.org/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.8-R0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+</project>
